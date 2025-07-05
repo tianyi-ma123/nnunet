@@ -1,7 +1,15 @@
 
 
 1. Get `data`
-2. Clone nnUNet
+
+
+2. Install `Torch` for CUDA `12.9`
+
+```sh
+python -m pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu129
+```
+
+3. Clone nnUNet
 
 ```sh
 git clone https://github.com/MIC-DKFZ/nnUNet.git
@@ -9,7 +17,7 @@ cd nnUNet
 python -m pip install -e .
 ```
 
-3. Fix nnUNet
+4. Fix nnUNet
 
 In `nnuNet/nnunetv2/experiment_planning/verify_dataset_integrity.py`
 
@@ -24,4 +32,4 @@ def verify_labels(label_file: str, readerclass: Type[BaseReaderWriter], expected
     ...
 ```
 
-4. Follow [tutorial](https://pycad.co/nnunet-for-medical-image-segmentation/)
+5. Follow [tutorial](https://pycad.co/nnunet-for-medical-image-segmentation/)
